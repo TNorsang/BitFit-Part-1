@@ -3,88 +3,84 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/detailLayout"
-    android:background="#2D363E"
-
+    android:background="@drawable/foodbg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
-
-    <TextView
-        android:id="@+id/foodText"
-        android:textColor="@color/white"
-
-        android:layout_width="102dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="148dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:text="Food:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/inputCalories"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/caloriesText"
-        android:textColor="@color/white"
-
-        android:layout_width="102dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
-        android:text="Calories:"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foodText" />
-
-    <EditText
-        android:id="@+id/inputFood"
-        android:layout_width="148dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="140dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Enter food"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAA7A7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/foodText"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/inputCalories"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAA7A7"
-        android:layout_width="148dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Enter calories"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/caloriesText"
-        app:layout_constraintTop_toBottomOf="@+id/inputFood" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Record food data"
-        android:textColorHint="#AAA7A7"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_button"
         android:backgroundTint="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Track Calories"
+        android:textColorHint="#AAA7A7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCalories" />
+
+    <EditText
+        android:id="@+id/inputCalories"
+        android:layout_width="148dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="ex: 1050"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAA7A7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caloriesText" />
+
+    <TextView
+        android:id="@+id/caloriesText"
+        android:layout_width="232dp"
+
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Now Enter the Calories."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputFood" />
+
+    <EditText
+        android:id="@+id/inputFood"
+        android:layout_width="148dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="ex: Burger"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAA7A7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodText" />
+
+    <TextView
+        android:id="@+id/foodText"
+        android:layout_width="285dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="188dp"
+        android:gravity="center"
+        android:text="What would you like to Track?"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputCalories"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
